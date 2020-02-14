@@ -16,14 +16,13 @@ using System.Windows.Shapes;
 namespace Shall.Views
 {
 	/// <summary>
-	/// Interaction logic for Login.xaml
+	/// Interaction logic for Startup.xaml
 	/// </summary>
-	public partial class Login : UserControl
+	public partial class Startup : UserControl
 	{
-		public Login()
+		public Startup()
 		{
 			InitializeComponent();
-
 		}
 	}
 }

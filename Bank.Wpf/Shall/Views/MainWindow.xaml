@@ -9,15 +9,8 @@
         mc:Ignorable="d"
         
         Title="MainWindow" Background="Green">
-    <Window.Resources>
-        <Style TargetType="Button">
-            <Setter Property="Width" Value="50" />
-            <Setter Property="Margin" Value="10"/>
-            <Setter Property="Padding" Value="5,2,5,4"/>
-        </Style>
-    </Window.Resources>
-    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" >
-        <Button x:Name="login" Content="Login"/>
-        <Button x:Name="Register" Content="Register"/>
-    </StackPanel>
+    <Grid>
+        <ContentControl prism:RegionManager.RegionName="MainRegion" />
+    </Grid>
+
 </Window>

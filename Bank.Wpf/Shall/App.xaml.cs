@@ -1,6 +1,5 @@
 ﻿using Prism.Ioc;
 using Prism.Ninject;
-using System.ComponentModel;
 using System.Windows;
 
 namespace Shall.Views

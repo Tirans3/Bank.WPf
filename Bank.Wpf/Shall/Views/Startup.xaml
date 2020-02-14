@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="Shall.Views.Startup"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Shall.Views"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             mc:Ignorable="d">
+    <UserControl.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Width" Value="50" />
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Padding" Value="5,2,5,4"/>
+        </Style>
+    </UserControl.Resources>
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" >
+        <Button x:Name="login" Content="Login" Command="{Binding LoginCommand}"/>
+        <Button x:Name="Register" Content="Register"/>
+    </StackPanel>
+</UserControl>
