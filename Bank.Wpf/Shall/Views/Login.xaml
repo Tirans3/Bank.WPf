@@ -9,7 +9,7 @@
     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical" Width="100">
         <TextBlock Text="UserName" Margin="5"/>
         <TextBox Margin="5"/>
-        <TextBlock Text="Email" Margin="5"/>
+        <TextBlock Text="Password" Margin="5"/>
         <TextBox Margin="5"/>
         <Button Content="Submit" Margin="5" Background="GreenYellow"/>
     </StackPanel>

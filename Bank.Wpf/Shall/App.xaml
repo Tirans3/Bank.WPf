@@ -1,8 +1,9 @@
-﻿<Application x:Class="Shall.Views.App"
+﻿<prism:PrismApplication x:Class="Shall.Views.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             StartupUri="Views.MainWindow.xaml">
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:local="clr-namespace:Shall">
     <Application.Resources>
-         
+
     </Application.Resources>
-</Application>
+</prism:PrismApplication>
