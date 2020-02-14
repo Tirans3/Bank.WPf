@@ -1,4 +1,5 @@
-﻿using Prism.Ioc;
+﻿using CommonServiceLocator;
+using Prism.Ioc;
 using Prism.Ninject;
 using System.Windows;
 
@@ -11,12 +12,12 @@ namespace Shall.Views
 	{
 		protected override void RegisterTypes(IContainerRegistry containerRegistry)
 		{
-
+			containerRegistry.Register<Login>();
 		}
 
 		protected override Window CreateShell()
 		{
-			return Container.Resolve<MainWindow>();
+			return ServiceLocator.Current.GetInstance<MainWindow>();
 		}
 	}
 

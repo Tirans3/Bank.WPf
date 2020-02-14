@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="Shall.Views.Login"
+﻿<UserControl x:Class="Shall.Views.Register"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,13 +6,14 @@
              xmlns:local="clr-namespace:Shall.Views"
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True"
-             mc:Ignorable="d" 
-             d:DesignHeight="150" d:DesignWidth="100">
-    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical" Width="100">
+             mc:Ignorable="d" >
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical" Width="110">
         <TextBlock Text="UserName" Margin="5"/>
         <TextBox Margin="5"/>
         <TextBlock Text="Password" Margin="5"/>
         <TextBox Margin="5"/>
-        <Button Content="Login" Margin="5" Background="GreenYellow"/>
+        <TextBlock Text="Email" Margin="5"/>
+        <TextBox Margin="5"/>
+        <Button Content="Register" Margin="5" Background="GreenYellow"/>
     </StackPanel>
 </UserControl>
