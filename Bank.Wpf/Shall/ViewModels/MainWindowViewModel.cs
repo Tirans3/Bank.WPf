@@ -14,7 +14,7 @@ namespace Shall.ViewModels
 			get { return _userName; }
 			set { SetProperty(ref _userName, value); }
 		}
-
+		public int s;
 		public string Password
 		{
 			get { return _password; }

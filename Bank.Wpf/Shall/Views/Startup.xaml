@@ -16,6 +16,6 @@
     </UserControl.Resources>
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" >
         <Button x:Name="login" Content="Login" Command="{Binding LoginCommand}"/>
-        <Button x:Name="Register" Content="Register"/>
+        <Button x:Name="Register" Content="Register" Command="{Binding LoginCommand}"/>
     </StackPanel>
 </UserControl>

@@ -11,6 +11,7 @@
         Title="MainWindow" Background="Green">
     <Grid>
         <ContentControl prism:RegionManager.RegionName="MainRegion" />
+        <ContentControl prism:RegionManager.RegionName="Login" />
     </Grid>
 
 </Window>

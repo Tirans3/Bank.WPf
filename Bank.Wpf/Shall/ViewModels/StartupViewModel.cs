@@ -13,15 +13,17 @@ namespace Shall.ViewModels
 	class StartupViewModel:BindableBase
 	{
 		public DelegateCommand LoginCommand { get; set; }
-	    private IRegionManager _iragionManeger;
+	    private IRegionManager _regionManeger;
 		private void Execute()
 		{
-			_iragionManeger.RequestNavigate("MainRegion", "Login");
+			_regionManeger.Regions["MainRegion"].RemoveAll();
+			
+			_regionManeger.RegisterViewWithRegion("Login", typeof(Login));
 		}
 
 		public StartupViewModel(IRegionManager regionManager)
 		{
-			_iragionManeger = regionManager;
+			_regionManeger = regionManager;
 
 			LoginCommand = new DelegateCommand(Execute);
 		}
