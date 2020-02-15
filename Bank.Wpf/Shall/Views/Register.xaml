@@ -7,13 +7,23 @@
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True"
              mc:Ignorable="d" >
-    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical" Width="110">
-        <TextBlock Text="UserName" Margin="5"/>
-        <TextBox Margin="5"/>
-        <TextBlock Text="Password" Margin="5"/>
-        <TextBox Margin="5"/>
-        <TextBlock Text="Email" Margin="5"/>
-        <TextBox Margin="5"/>
-        <Button Content="Register" Margin="5" Background="GreenYellow"/>
-    </StackPanel>
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.RowDefinitions >
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0"  Text="UserName" Margin="5"/>
+        <TextBox Grid.Row="0" Grid.Column="1"  Margin="5" MinWidth="100" MinHeight="25"/>
+        <TextBlock Grid.Row="1"  Text="Password" Margin="5"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Margin="5" MinWidth="100" MinHeight="25"/>
+        <TextBlock Grid.Row="2"  Text="Email" Margin="5"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Margin="5" MinWidth="100" MinHeight="25"/>
+        <Button Grid.Row="3" Grid.Column="1" Content="Register" Margin="5"  Background="GreenYellow"/>
+    </Grid>
 </UserControl>
