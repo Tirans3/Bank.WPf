@@ -7,8 +7,7 @@
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         mc:Ignorable="d"
-        
-        Title="MainWindow" Background="Green">
+        Title="MainWindow" Background="Gray">
     <Grid>
         <ContentControl prism:RegionManager.RegionName="MainRegion" />
         <ContentControl prism:RegionManager.RegionName="Login" />

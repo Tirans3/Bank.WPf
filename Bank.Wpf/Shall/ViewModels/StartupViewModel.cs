@@ -2,30 +2,33 @@
 using Prism.Mvvm;
 using Prism.Regions;
 using Shall.Views;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Shall.ViewModels
 {
-	class StartupViewModel:BindableBase
-	{
-		public DelegateCommand LoginCommand { get; set; }
-	    private IRegionManager _regionManeger;
-		private void Execute()
-		{
-			_regionManeger.Regions["MainRegion"].RemoveAll();
-			
-			_regionManeger.RegisterViewWithRegion("Login", typeof(Login));
-		}
+    class StartupViewModel : BindableBase
+    {
+        public DelegateCommand<string> LoginRegisterCommand { get; set; }
+        private IRegionManager _regionManeger;
+        private void Execute(string loginorregister)
+        {
+            _regionManeger.Regions["MainRegion"].RemoveAll();
 
-		public StartupViewModel(IRegionManager regionManager)
-		{
-			_regionManeger = regionManager;
+            switch (loginorregister)
+            {
+                case "Login":
+                    _regionManeger.RegisterViewWithRegion("MainRegion", typeof(Login));
+                    break;
+                case "Register":
+                    _regionManeger.RegisterViewWithRegion("MainRegion", typeof(Register));
+                    break;
+            }
+        }
 
-			LoginCommand = new DelegateCommand(Execute);
-		}
-	}
+        public StartupViewModel(IRegionManager regionManager)
+        {
+            _regionManeger = regionManager;
+
+            LoginRegisterCommand = new DelegateCommand<string>(Execute);
+        }
+    }
 }

@@ -6,13 +6,34 @@
              xmlns:local="clr-namespace:Shall.Views"
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True"
-             mc:Ignorable="d" 
-             d:DesignHeight="150" d:DesignWidth="100">
-    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical" Width="100">
-        <TextBlock Text="UserName" Margin="5"/>
-        <TextBox Margin="5"/>
-        <TextBlock Text="Password" Margin="5"/>
-        <TextBox Margin="5"/>
-        <Button Content="Login" Margin="5" Background="GreenYellow"/>
-    </StackPanel>
+             mc:Ignorable="d">
+    <UserControl.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="MinWidth" Value="200"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Padding" Value="2"/>
+            <Setter Property="MaxLength" Value="16"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.RowDefinitions >
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0"  Text="UserName" Margin="5"/>
+        <TextBox Grid.Row="0" Grid.Column="1"/>
+        <TextBlock Grid.Row="1"  Text="Password" Margin="5"/>
+        <TextBox Grid.Row="1" Grid.Column="1"/>
+        <Button Grid.Row="2" Grid.Column="1" Content="Login" Margin="10" Padding="0,0,0,4" Background="GreenYellow"/>
+    </Grid>
 </UserControl>
